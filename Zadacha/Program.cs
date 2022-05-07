@@ -76,7 +76,7 @@ namespace Massive
                 Console.WriteLine($"+= Вывод в консоль {msg} массива =+");
                 for (int i=0; i < rows; i++)
                 {
-                    Console.WriteLine(array[i]);
+                    Console.WriteLine($"Элемент {i}: \t{array[i]}");
                 }
             }
         }
