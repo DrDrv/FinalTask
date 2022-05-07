@@ -8,7 +8,7 @@ namespace Massive
         {
             // Входные данные
             var choice = "";
-            string[] ArrayInput = new string[] {"qwerty", "12", "-4", "qaz", "qasde", "", "A"};
+            string[] ArrayInput = new string[] {"qwerty", "12", "-4", "№;%", "qasde", "", "A"};
             int flag = 0;                           //переменная флаг для ветвления
             int lenghtnewarray = 0;                 //длина нового массива
             int lengtharrayinput = ArrayInput.Length;
@@ -22,14 +22,13 @@ namespace Massive
             } 
             if (choice == "y") 
             {
-                Console.WriteLine("Введите 7 строк для массива:");
+                Console.WriteLine("Введите 7 строк для массива:"); // число 7 взято случайно, исходя из уже проиницилизированного входящего
                 for (int i = 0; i < 7; i++)
                 {
                     Console.Write($"Элемент {i+1}:\t");
                     choice = Console.ReadLine();
                     if (choice == null) choice = "";
                     ArrayInput[i] = Convert.ToString(choice);
-
                 }
             }
             // Вывод входного массива - метод
@@ -45,7 +44,7 @@ namespace Massive
             string[] CompareArray()
             {
                 int indexnewarray = 0;
-                int peremennaya = 0;
+                int peremennaya = 0; // Переменная для инициалицации временного массива NGArr
                 if (flag == 0) peremennaya = 1;
                 else peremennaya = lenghtnewarray;
                 string[] NGArr = new string[peremennaya];
