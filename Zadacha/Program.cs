@@ -43,11 +43,11 @@ namespace Massive
 
             string[] CompareArray()
             {
-                int indexnewarray = 0;
-                int peremennaya = 0; // Переменная для инициалицации временного массива NGArr
-                if (flag == 0) peremennaya = 1;
-                else peremennaya = lenghtnewarray;
-                string[] NGArr = new string[peremennaya];
+                int indextemparray = 0; // Индекс для массива-переменного
+                int sizetemparray = 0; // Переменная длины для инициалицации временного массива NTempArr
+                if (flag == 0) sizetemparray = 1;
+                else sizetemparray = lenghtnewarray;
+                string[] NTempArr = new string[sizetemparray]; 
                 
                 for (int index = 0; index < lengtharrayinput; index++)
                 {
@@ -56,16 +56,16 @@ namespace Massive
                         if (flag == 0)
                         {
                             lenghtnewarray++;
-                            NGArr[0] = Convert.ToString(lenghtnewarray);
+                            NTempArr[0] = Convert.ToString(lenghtnewarray);
                         }
                         else 
                         { 
-                            NGArr[indexnewarray] = ArrayInput[index];
-                            indexnewarray++;
+                            NTempArr[indextemparray] = ArrayInput[index];
+                            indextemparray++;
                         }
                     }
                 }
-                return NGArr;
+                return NTempArr;
             }
             
             // Метод вывода массива в консоль
